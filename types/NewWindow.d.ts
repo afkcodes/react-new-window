@@ -66,7 +66,17 @@ declare module 'react-new-window' {
      * If specified, copy styles from parent window's document.
      */
     copyStyles?: boolean
-  }
+
+    /**
+     * If specified, add script elements to the head
+     */
+    scripts?: Array<IScript>
+
+    /**
+     * If specified, add meta elements to the head
+     */
+    metas?: Array<Object>
+}
 
   export default class NewWindow extends React.PureComponent<INewWindowProps> {
     private readonly container: HTMLDivElement
